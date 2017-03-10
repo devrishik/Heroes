@@ -52,3 +52,14 @@ The design and information flow of the app is a bit unconventional, it has been 
 **Merge Page**
     This page is used to merge to super heroes with their given `hero_name`
 
+
+Development Time
+----------------
+
+It took me roughly 20 hours to finish. If I had more time I would love to spend more time on Django Forms and create a widget to choose for attributes between two heroes.
+
+CSS
+^^^
+
+The CSS is horrible, please don't judge my css skills from this. I spent most of the time fixing forms and view.
+So, CSS is something I can easily improve if I had more time.
