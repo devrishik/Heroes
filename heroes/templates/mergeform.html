@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Merge Heroes{% endblock %}
+
+{% block content %}
+
+
+
+<style type="text/css">
+</style>
+<p>
+	<b>
+		Enter hero details
+	</b>
+</p>
+<form action="." method="post">
+    {% csrf_token %}
+    {{form.errors}}
+    {% if form.errors %}
+            {% for error in form.erorrs %}
+            	{{error}}
+            {% endfor %}
+    {% endif %}
+    {% for field in form.visible_fields %}
+    <div class="fieldWrapper">
+        {{ field.label_tag }} {{ field }}
+    </div>
+{% endfor %}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock content %}

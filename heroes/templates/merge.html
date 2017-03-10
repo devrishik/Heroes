@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}All Heroes{% endblock %}
+
+{% block content %}
+
+
+
+<style type="text/css">
+	#list2 { width:100%; }
+	#list2 ol { font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color:#272b2d;  }
+	#list2 ol li { display: inline-block;}
+	#list2 ol li p { padding:8px; font-style:normal; font-family:Arial; font-size:13px; color:#b34646; border-left: 1px solid #8c3f3f; }
+	#list2 ol li p em { display:block; }
+</style>
+<p>
+	<b>
+		Enter names of Heroes you wanna merge
+	</b>
+</p>
+<form action="/merge/" method="post">
+    {% csrf_token %}
+    {{form.errors}}
+    {% if form.errors %}
+            {% for error in form.erorrs %}
+            	{{error}}
+            {% endfor %}
+    {% endif %}
+    {% for field in form.visible_fields %}
+    <div class="fieldWrapper">
+        {{ field.label_tag }} {{ field }}
+    </div>
+{% endfor %}
+    <input type="submit" value="Submit" />
+</form>
+<div id="list2">
+   <ol>
+{% for hero in heroes %}
+	      <li>
+	      	<p>
+	      		<b><em>{{hero|capfirst}}</em> {{hero.real_name|capfirst}}</b>
+	      	</p>
+	      </li>
+{% endfor %}
+
+   </ol>
+</div>
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}All Heroes{% endblock %}
+
+{% block content %}
+
+
+
+<style type="text/css">
+	#list2 { width:100%; }
+	#list2 ol { font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color:#272b2d;  }
+	#list2 ol li { display: inline-block;}
+	#list2 ol li p { padding:8px; font-style:normal; font-family:Arial; font-size:13px; color:#b34646; border-left: 1px solid #8c3f3f; }
+	#list2 ol li p em { display:block; }
+</style>
+
+<div id="list2">
+   <ol>
+{% for hero in heroes %}
+	      <li>
+	      	<p>
+	      		<b><em>{{hero|capfirst}}</em> {{hero.real_name|capfirst}}</b>
+	      	</p>
+	      	{% if hero.attributes.strength %}
+	      	<p>
+	      		<strong>Strength:</strong> {{hero.attributes.strength}}
+	      	</p>
+	      	{% endif %}
+	      	{% if hero.attributes.power %}
+	      	<p>
+	      		<strong>Power:</strong> {{hero.attributes.power}}
+	      	</p>
+	      	{% endif %}
+	      	{% if hero.attributes.durability %}
+	      	<p>
+	      		<strong>Durability:</strong> {{hero.attributes.durability}}
+	      	</p>
+	      	{% endif %}
+	      	{% if hero.attributes.speed %}
+	      	<p>
+	      		<strong>Speed:</strong> {{hero.attributes.speed}}
+	      	</p>
+	      	{% endif %}
+	      	{% if hero.attributes.combat %}
+	      	<p>
+	      		<strong>Combat:</strong> {{hero.attributes.combat}}
+	      	</p>
+	      	{% endif %}
+	      	{% if hero.attributes.intelligence %}
+	      	<p>
+	      		<strong>Intelligence:</strong> {{hero.attributes.intelligence}}
+	      	</p>
+	      	{% endif %}
+	      	<p>
+	      		<strong>Powers</strong> {{hero.power_list}}
+	      	</p>
+	      	<p>
+	      		<strong>Weaknesses</strong> {{hero.weakness_list}}
+	      	</p>
+	      </li>
+{% endfor %}
+
+   </ol>
+</div>
+{% endblock content %}
