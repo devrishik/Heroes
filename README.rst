@@ -11,58 +11,44 @@ A short description of the project.
 :License: MIT
 
 
-Settings
---------
+Requirments
+-----------
 
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
+* Python 2.7
+* VirtualEnv
+* Postgres
 
 Basic Commands
 --------------
 
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
+Setting Up Your Environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+* 1st install and activate a virtualenv in your terminal
 
-* To create an **superuser account**, use this command::
+* Install dependencies
 
-    $ python manage.py createsuperuser
+    $ pip install -r requirements/local.txt
 
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
+* Update Database variables in Heroes/config/local.txt:50
 
-Test coverage
-^^^^^^^^^^^^^
+Start the server
+^^^^^^^^^^^^^^^^
+To start the server
 
-To run the tests, check your test coverage, and generate an HTML coverage report::
+    $ python manage.py runserver 8000
 
-    $ coverage run manage.py test
-    $ coverage html
-    $ open htmlcov/index.html
+Then open your browser and go to http://localhost:8000
 
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using the website
+-----------------
 
-::
+The design and information flow of the app is a bit unconventional, it has been done to save time for this project
 
-  $ py.test
+**Home Page**
+    This is a List page for all the users in the database.
+    This page is used on successful merging of two heroes or when a new hero is created. The new hero can be seen at the         bottom of the page. I could have created a Hero/<id> page but thats just extra code, and this project more time than i       thought it would take
 
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
-
-
+**Merge Page**
+    This page is used to merge to super heroes with their given `hero_name`
 
