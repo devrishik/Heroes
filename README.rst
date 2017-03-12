@@ -57,7 +57,7 @@ The design and information flow of the app is a bit unconventional, it has been 
 
 **Home Page**
     This is a List page for all the users in the database.
-    This page is used on successful merging of two heroes or when a new hero is created. The new hero can be seen at the         bottom of the page. I could have created a Hero/<id> page but thats just extra code, and this project more time than i       thought it would take
+    This page is used on successful merging of two heroes or when a new hero is created. The new hero can be seen at the         bottom of the page. I could have created a Hero/<id> page but thats just extra code, and this project took more time         than I thought it would take.
 
 **Merge Page**
     This page is used to merge to super heroes with their given `hero_name`
