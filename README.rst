@@ -30,7 +30,9 @@ Setting Up Your Environment
 
     $ pip install -r requirements/local.txt
 
-* Update Database variables in Heroes/config/local.txt:50
+* Update Database variables in 
+
+    Heroes/config/local.txt:50
 
 * Migrate the database
 
