@@ -10,9 +10,13 @@ from django.shortcuts import render, redirect
 from .models import *
 from .forms import HeroForm, MergeForm, CreateForm
 from .functions import _create_from_dict
+from utilities.request import get_heroes
 
 
 def index(request):
+    heroes = Heroes.objects.all()
+    if len(heroes) == 0:
+        get_heroes()
     heroes = Heroes.objects.all()
     context = {
         'heroes': heroes

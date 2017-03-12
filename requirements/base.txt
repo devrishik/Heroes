@@ -39,6 +39,6 @@ redis>=2.10.5
 # Requests
 requests==2.13.0
 
-djangorestframework-3.5.4
+djangorestframework==3.5.4
 
 
