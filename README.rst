@@ -37,7 +37,9 @@ Setting Up Your Environment
 * Migrate the database
 
     $ python manage.py migrate 
+    
     $ python manage.py migrate utilities  
+    
     $ python manage.py migrate heroes  
 
 Start the server
