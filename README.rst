@@ -32,6 +32,12 @@ Setting Up Your Environment
 
 * Update Database variables in Heroes/config/local.txt:50
 
+* Migrate the database
+
+    $ python manage.py migrate 
+    $ python manage.py migrate utilities
+    $ python manage.py migrate heroes
+
 Start the server
 ^^^^^^^^^^^^^^^^
 To start the server
@@ -63,3 +69,10 @@ CSS
 
 The CSS is horrible, please don't judge my css skills from this. I spent most of the time fixing forms and view.
 So, CSS is something I can easily improve if I had more time.
+
+POST to API
+^^^^^^^^^^^
+
+    /heroes/request.py
+    
+Helper functions to get and post from the given API. Since the token expires soon, I decided not to update the data in the API. But helper functions already exist above.
