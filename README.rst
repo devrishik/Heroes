@@ -62,7 +62,7 @@ The design and information flow of the app is a bit unconventional, it has been 
 Development Time
 ----------------
 
-It took me roughly 20 hours to finish. If I had more time I would love to spend more time on Django Forms and create a widget to choose for attributes between two heroes.
+It took me roughly 20 hours to finish. I would love to spend more time on Django Forms and create a widget to choose for attributes between two heroes.
 
 CSS
 ^^^
